@@ -211,7 +211,7 @@ const Home = () => {
       },
 
   ]);
-
+console.log(setMoviesOnly)
 
   const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchQuery(e.target.value);

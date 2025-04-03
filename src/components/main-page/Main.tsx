@@ -233,7 +233,7 @@ interface MovieProps {
 const Main: React.FC<MovieProps> = ({ movies }) => {
   const [movie, setMovie] = useState<Array<Movie>>(Movies);
  console.log(setMovie)
-
+console.log(recommend)
   return (
     <>
       <div className="map">
