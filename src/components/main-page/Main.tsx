@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import rectangle from "../../assets/Rectangle.png";
 import rectangle1 from "../../assets/Rectangle (1).png";
 import rectangle2 from "../../assets/Rectangle (2).png";

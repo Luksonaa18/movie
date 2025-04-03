@@ -1,4 +1,4 @@
-import React from 'react';
+
 import "./Movie.css";
 import { FaRegBookmark } from "react-icons/fa6";
 
