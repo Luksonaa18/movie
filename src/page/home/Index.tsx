@@ -214,6 +214,7 @@ const Home = () => {
   const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchQuery(e.target.value);
   };
+  console.log(handleSearchChange)
   const filteredMovies = moviesOnly.filter((movie) =>
     movie.title.toLowerCase().includes(searchQuery.toLowerCase())
   );
