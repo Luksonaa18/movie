@@ -1,4 +1,4 @@
-import { useState, useContext } from "react";
+import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 
 const SignUp = () => {
@@ -27,41 +27,32 @@ const SignUp = () => {
       setError("All fields are required");
       return;
     }
-
-    // Email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(formData.email)) {
       setError("Please enter a valid email address");
       return;
     }
-
-    // Password validation
     if (formData.password.length < 6) {
       setError("Password must be at least 6 characters long");
       return;
     }
-
     // Password confirmation check
     if (formData.password !== formData.confirmPassword) {
       setError("Passwords do not match");
       return;
     }
-
     const users = JSON.parse(localStorage.getItem("users") || "[]");
-    
+
     const userExists = users.some((user: any) => user.email === formData.email);
     if (userExists) {
       setError("User with this email already exists");
       return;
     }
-    
     users.push({
       email: formData.email,
       password: formData.password,
     });
-    
     localStorage.setItem("users", JSON.stringify(users));
-    
 
     navigate("/");
   };
@@ -105,9 +96,11 @@ const SignUp = () => {
               onChange={handleChange}
             />
           </div>
-          <button type="submit" className="signup-button">Create an account</button>
+          <button type="submit" className="signup-button">
+            Create an account
+          </button>
         </form>
-        <div style={{color:"white"}} className="login-link">
+        <div style={{ color: "white" }} className="login-link">
           Already have an account? <Link to="/">Login</Link>
         </div>
       </div>
