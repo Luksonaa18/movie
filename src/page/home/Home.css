@@ -21,3 +21,29 @@ nav{
     margin-left: 20px;
     margin-top: 10px;
 }
+@media(min-width:768px){
+    .all-home{
+        display: flex;
+        align-items: center;
+    }
+    header{
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        width: 120px;
+        border-radius: 12px;
+        
+    }nav{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+    }.icons{
+        display: flexbox;
+        flex-direction: column;
+    }
+    .movie-container{
+        display: flex;
+        flex-direction: row;
+    }
+}

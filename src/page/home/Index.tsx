@@ -293,13 +293,7 @@ const Home = () => {
             <img src={logo5} alt="Profile" />
           </nav>
         </header>
-        <input
-          id="home"
-          type="text"
-          placeholder="Search for Movies or TV shows"
-          value={searchQuery}
-          onChange={handleSearchChange}
-        />
+       
 
         {/* Content Area */}
         <div className="content-area">
